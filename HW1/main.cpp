@@ -7,12 +7,17 @@
 #include <stdio.h>
 #include "reference_calc.h"
 #include "compare.h"
+#include "student_func.h"
 
-void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, 
-                            uchar4 * const d_rgbaImage,
-                            unsigned char* const d_greyImage, 
-                            size_t numRows, size_t numCols);
+#ifndef REFERENCE_H__
+#define REFERENCE_H__
 
+void referenceCalculation(const uchar4* const rgbaImage,
+                          unsigned char *const greyImage,
+                          size_t numRows,
+                          size_t numCols);
+
+#endif
 //include the definitions of the above functions for this homework
 #include "HW1.cpp"
 
